@@ -1,4 +1,8 @@
 def is_prime(num):
+    '''
+        :param num: random number
+        :return: True/False is prime
+    '''
     if num < 2:
         return False
     for i in range(2, num):
@@ -7,6 +11,10 @@ def is_prime(num):
     return True
 
 def get_prime_list(num):
+    '''
+    :param num: prime number
+    :return: contained prime numbers by deleting a number
+    '''
     if not is_prime(num): return False
 
     num = str(num)
@@ -19,6 +27,10 @@ def get_prime_list(num):
     return prime_list
 
 def flatten_list(digit_list):
+    '''
+    :param digit_list: digit_list (containing lists)
+    :return: digit_list (only with single digits)
+    '''
     if not digit_list: return []
 
     new_list = []
@@ -30,6 +42,10 @@ def flatten_list(digit_list):
     return new_list
 
 def get_prime_digit_list(num):
+    '''
+    :param num: prime number
+    :return: end digits of reduced deletable prime
+    '''
     prime_list = get_prime_list(num)
     new_list = []
     if not prime_list: return []
@@ -39,6 +55,10 @@ def get_prime_digit_list(num):
     return flatten_list(new_list)
 
 def get_count(num):
+    '''
+    :param num: prime number
+    :return: number of ways to reduce a deletable prime
+    '''
     return len(get_prime_digit_list(num))
 
 # main
