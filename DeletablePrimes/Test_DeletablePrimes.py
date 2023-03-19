@@ -17,11 +17,11 @@ class Test(unittest.TestCase):
         # act
         for index in range(len(inputs)):
             outputs.append(get_count(inputs[index]))
-            print(str(inputs[index]) + " -> " + str(outputs[index]))
+            print(str(index) + " -> " + str(outputs[index]))
 
         # assert
         for index in range(len(outputs)):
-            self.assertEqual(outputs[index], expected[index], str(inputs[index]) + " should be " + str(expected[index]) + " actual: " + str(outputs[index]))
+            self.assertEqual(expected[index],outputs[index], str(inputs[index]) + " should be " + str(expected[index]) + " actual: " + str(outputs[index]))
 
 if __name__ == '__main__':
     unittest.main()

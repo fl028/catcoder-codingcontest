@@ -67,4 +67,4 @@ if __name__ == '__main__':
     print("inputs: " + str(inputs))
 
     for item in inputs:
-        print(str(item) +  ": " + str(get_count(item)))
+        print(str(item) + " -> " + str(get_count(item)))
