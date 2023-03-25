@@ -42,9 +42,6 @@ class Auction:
     def get_bid_history(self):
         return ','.join(self.bid_history)
 
-
-
-
 class Bid:
     def __init__(self, bidders_name, bid, highest_bid,buy_now_price):
         self.bidders_name = bidders_name
@@ -67,12 +64,7 @@ class Bid:
             self.current_price = buy_now_price
 
     def __str__(self):
-        return self.bidders_name + "," + str(self.current_price)
-
-def get_highest_bid_in_auction(auction_history):
-    auction = Auction(auction_history)
-    return auction.get_highest_bid()
-
+        return f"{self.bidders_name}, {self.current_price}"
 
 # main
 if __name__ == '__main__':

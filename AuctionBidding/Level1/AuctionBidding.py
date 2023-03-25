@@ -21,8 +21,7 @@ class Auction:
                 self.highest_bid = self.bids[-1]
 
     def get_highest_bid(self):
-        return str(self.highest_bid.bidders_name) + "," + str(self.bids[-1].current_price)
-
+        return f"{self.highest_bid.bidders_name},{self.bids[-1].current_price}"
 
 class Bid:
     def __init__(self, bidders_name, bid, highest_bid):
@@ -39,7 +38,7 @@ class Bid:
             self.current_price = self.bid
 
     def __str__(self):
-        return self.bidders_name + "," + str(self.current_price)
+        return f"{self.bidders_name}, {self.current_price}"
 
 # main
 if __name__ == '__main__':
